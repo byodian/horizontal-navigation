@@ -1,10 +1,10 @@
 # Horizontal NavigHator Menu
-Some horizontal navigator styles
+:tada:Some horizontal navigator styles:tada:
 
 ## Usage
 
 ## Contributing
 
 ## License
-[MIT]()
+[MIT](https://github.com/byodian/horizontal-navigator-menu/blob/master/LICENSE)
 
