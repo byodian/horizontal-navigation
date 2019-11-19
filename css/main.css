@@ -79,11 +79,10 @@
   font-family: '黑体', sans-serif;
 }
 
-/*Start - 水平导航菜单 float 方案 - Start*/
 .navbar {
-  min-height: 58px;
-  padding: 0 80px;
+  height: 58px;
   border-radius: 5px;
+  min-height: 58px;
 }
 
 /* Inherit the color value of navbar-dark element  */
@@ -93,16 +92,12 @@
 }
 
 .navbar-brand {
-  height: 58px; 
+  height: 58px;
   margin: 0 20px;
 }
 
 .navbar-logo {
   height: 36px;
-}
-
-.inline-block .navbar-brand {
-  vertical-align: middle;
 }
 
 .navbar-nav,
@@ -111,20 +106,17 @@
   height: 100%;
 }
 
-.navbar-nav {
-  margin-bottom: 0;
-}
-
 .nav-item {
   padding: 5px 0;
 }
 
+.navbar-nav {
+  margin-bottom: 0;
+}
+
 .nav-link {
   display: block;
-  padding: 0 20px;
-  border-radius: 2px;
-  line-height: 48px;
-  transition: all .2s ease-in;
+  transition: all .2s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 .nav-dark .nav-link:hover {
@@ -137,26 +129,8 @@
   color: var(--gray-dark);
 }
 
-/* Float method */
-.float-left .navbar-brand, .float-left .nav-item {
-  float: left;
-}
-
-/* Inline-block display method */
-.inline-block > *,
-.inline-block .nav-item {
-  display: inline-block;
-  /* Remove the space between inline-block elements */
-  font-size: 0;
-}
-
-.inline-block .nav-link {
-  font-size: 1rem;
-}
-
 @media screen and (max-width: 1201px) {
   .navbar {
-    padding: 0;
     text-align: center;
   }
   
@@ -170,4 +144,69 @@
   .navbar-nav {
     padding-left: 0;
   }
+}
+
+/* Methods */
+
+/* A elements styles*/
+.float-left .nav-link, 
+.inline-block .nav-link {
+  padding: 0 20px;
+  border-radius: 2px;
+  line-height: 48px;
+}
+
+/* Float method */
+.float-left .navbar-brand, 
+.float-left .nav-item {
+  height: 100%;
+  float: left;
+}
+
+/* Inline-block display method */
+.inline-block > *,
+.inline-block .nav-item {
+  display: inline-block;
+  /* Remove the space between inline-block elements */
+  font-size: 0;
+}
+
+.inline-block .navbar-brand {
+  /* height: 58px */
+  height: 100%;
+  vertical-align: middle;
+}
+
+.inline-block .nav-link {
+  font-size: 1rem;
+}
+
+/* Table display method*/
+.table-navbar {
+  width: 100%;
+  max-width: 45em;
+}
+
+.table-nav {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 48px;
+  border-collapse: collapse;
+  margin-bottom: 0;
+}
+
+.table-item {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+
+.table-link {
+  display: block;
+}
+
+.table-item:hover .table-link {
+  color: var(--orange);
 }
