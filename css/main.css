@@ -1,0 +1,173 @@
+:root {
+  --blue: #007bff;
+  --blue-light: #c2e9fb;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #f6d365;
+  --green: #28a745;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-light: #ececec;
+  --gray-dark: #343a40;
+  --light: #f8f9fa;
+  --dark: #263238;
+}
+
+.container {
+  background-color: var(--white);
+}
+
+/* Header */
+.page-header {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  background-color: var(--yellow);
+}
+
+.method {
+  margin-bottom: 20px;
+}
+
+.method span {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: var(--yellow);
+  color: var(--dark); 
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+
+/* Section */
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+.section--intro {
+  flex-direction: column;
+  height: 600px;
+  background-color: var(--dark);
+  color: var(--light);
+  font-size: 1.75rem;
+}
+
+@media screen and (max-width: 764px) {
+  .section--intro {
+    height: 400px;
+    font-size: 1rem;
+  }
+}
+
+.section--intro p:last-of-type {
+  margin-bottom: 0;
+}
+
+.section--intro span {
+  color: var(--yellow);
+}
+
+.section--nav {
+  flex-direction: column;
+}
+
+.intro-title {
+  font-family: '黑体', sans-serif;
+}
+
+/*Start - 水平导航菜单 float 方案 - Start*/
+.navbar {
+  min-height: 58px;
+  padding: 0 80px;
+  border-radius: 5px;
+}
+
+/* Inherit the color value of navbar-dark element  */
+.navbar-brand, 
+.nav-link {
+  color: inherit;
+}
+
+.navbar-brand {
+  height: 58px; 
+  margin: 0 20px;
+}
+
+.navbar-logo {
+  height: 36px;
+}
+
+.inline-block .navbar-brand {
+  vertical-align: middle;
+}
+
+.navbar-nav,
+.nav-item,
+.nav-link {
+  height: 100%;
+}
+
+.navbar-nav {
+  margin-bottom: 0;
+}
+
+.nav-item {
+  padding: 5px 0;
+}
+
+.nav-link {
+  display: block;
+  padding: 0 20px;
+  border-radius: 2px;
+  line-height: 48px;
+  transition: all .2s ease-in;
+}
+
+.nav-dark .nav-link:hover {
+  background-color: var(--gray-dark);
+  color: var(--yellow);
+}
+
+.nav-light .nav-link:hover {
+  background-color: var(--gray-light);
+  color: var(--gray-dark);
+}
+
+/* Float method */
+.float-left .navbar-brand, .float-left .nav-item {
+  float: left;
+}
+
+/* Inline-block display method */
+.inline-block > *,
+.inline-block .nav-item {
+  display: inline-block;
+  /* Remove the space between inline-block elements */
+  font-size: 0;
+}
+
+.inline-block .nav-link {
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 1201px) {
+  .navbar {
+    padding: 0;
+    text-align: center;
+  }
+  
+  .navbar-brand {
+    /* 内部元素居中对齐 */
+    text-align: inherit;
+    width: 100%;
+    margin: 0;
+  }
+
+  .navbar-nav {
+    padding-left: 0;
+  }
+}
