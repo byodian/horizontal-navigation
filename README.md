@@ -1,5 +1,5 @@
 # Horizontal Navigation
-:tada:使用 float、inline-block、table 和 flex 四种方法水平布局导航栏:tada:
+使用 float、inline-block、table 和 flex 四种方法水平布局导航栏
 
 [demo](https://horizontalnav.netlify.com/)
 
