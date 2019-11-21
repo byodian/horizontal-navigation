@@ -38,19 +38,15 @@
   top: 0;
 }
 
-/* Center an element horizontally and vertically */
-/* when the element of unknown width and */
-.center {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
 /* Background */
 .bg-dark {
   background-color: #263238;
   color: #f8f9fa;
+}
+
+.bg-light {
+  background-color: #f8f9fa;
+  color: #263238;
 }
 
 /* Create block formatting context*/
